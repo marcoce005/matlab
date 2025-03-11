@@ -6,5 +6,7 @@ y = sqrt((100 .* ((1 - 0.01 .* (x .^ 2)) .^ 2)) ./ (((1 - (x .^ 2)) .^ 2) + 0.1 
 
 plot(y);
 saveas(gcf, "es7_plot1.png");
+
+figure;
 loglog(y);
 saveas(gcf, "es7_plot2.png");
