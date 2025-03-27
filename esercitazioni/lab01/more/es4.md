@@ -3,7 +3,7 @@
 La quantità
 
 $$
-\frac {(x!)^2 \: + \: (y!)^2} {z!}
+\frac {(x!)^2 \  + \  (y!)^2} {z!}
 $$
 
 con $x = 121$, $y = 122$, $z = 150$ vale circa:
@@ -35,19 +35,19 @@ Avendo ora i fattoriali in scala logaritmica non bastano ad aggirare l'overflow 
 Ora ci troviamo nel seguente stato:
 
 $$
-    \frac {(e ^ {log(x!)}) ^ 2 \: + \: (e ^ {log(y!)}) ^ 2} {e ^ {log(z!)}}
+    \frac {(e ^ {log(x!)}) ^ 2 \  + \  (e ^ {log(y!)}) ^ 2} {e ^ {log(z!)}}
 $$
 
 $$
-    \frac {e ^ {2 \cdot log(x!)} \: + \: e ^ {2 \cdot log(y!)}} {e ^ {log(z!)}}
+    \frac {e ^ {2 \cdot log(x!)} \  + \  e ^ {2 \cdot log(y!)}} {e ^ {log(z!)}}
 $$
 
 $$
-    \frac {e ^ {2 \cdot log(x!)}} {e ^ {log(z!)}} \: + \: \frac {e ^ {2 \cdot log(y!)}} {e ^ {log(z!)}}
+    \frac {e ^ {2 \cdot log(x!)}} {e ^ {log(z!)}} \  + \  \frac {e ^ {2 \cdot log(y!)}} {e ^ {log(z!)}}
 $$
 
 $$
-    {e ^ {2 \cdot log(x!) - log(z!)}} \: + \: {e ^ {2 \cdot log(y!) - log(z!)}}
+    {e ^ {2 \cdot log(x!) - log(z!)}} \  + \  {e ^ {2 \cdot log(y!) - log(z!)}}
 $$
 
 Ora questi 2 esponenziali sono calcolabili senza andare in overflow. 
