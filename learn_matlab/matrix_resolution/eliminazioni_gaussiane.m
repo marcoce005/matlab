@@ -27,9 +27,9 @@ function X = elim_gaussiane(A, B)
     n = length(B);
     for k = 1 : n - 1
         for i = k + 1 : n
-            m = A(i, k) / A(k, k);
-            A(i, :) = A(i, :) - m * A(k, :);
-            B(i) = B(i) - m * B(k);
+            A(i, k) = A(i, k) / A(k, k);            % salviamo m in A(i, k)
+            A(i, k + 1 : n) = A(i, k + 1 : n) - A(i, k) * A(k, k + 1 : n);
+            B(i) = B(i) - A(i, k) * B(k);
         end
     end
     X = backward(A, B);
